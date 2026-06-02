@@ -1,0 +1,484 @@
+
+body{
+
+    background-color: #222222;
+}
+
+html{
+box-sizing: border-box;  /*Para la noramalizacion de css*/
+}
+*,*:before,*::after{
+    box-sizing: inherit;
+}
+
+h1 ,h2,h3,h4,h5,h6{
+
+    font-family: sans-serif;
+}
+
+/**globales**/
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+
+    max-width: 100%;
+    display: block;
+}
+
+
+.text-center{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.nombre-sitio {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 2rem; /* Da un poco de espacio para que el logo no pegue con el borde de la pantalla */
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    position: relative; /* ESTO ES CLAVE para que el texto se pueda centrar de forma absoluta respecto a este contenedor */
+    background-color: #8cbc00;
+}
+
+.nombre-sitio h1{
+
+    color: #f1f1f1;
+}
+
+.nombre-sitio span{
+
+    color: #000 !important;
+}
+
+.logo-header {
+    width: 260px; /* Tamaño del logo */
+    height: auto;
+}
+
+.nombre-sitio h1 {
+    margin: 0;
+    /* Las siguientes tres líneas centran el texto ignorando al logo */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion-principal a {
+    color: #e1e1e1; /* Un color claro para que resalte si tu fondo es oscuro */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Los pone en mayúsculas */
+    font-family: sans-serif;
+}
+
+.navegacion-principal a:hover {
+    color: #8cbc00; /* Cambia a verde cuando pasas el mouse por encima */
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto ;  /* Arriba derecha, abajo izquierda.    Arriba-abajo derecha-izquierda*/
+    
+}
+
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover{
+
+    background-color: #769c02;
+    
+}
+
+.Enbacezado-lista{
+
+    color: #f1f1f1;
+
+}
+
+.beneficios{
+
+
+    color: #f1f1f1;
+
+}
+
+.tertimonios{
+    color: #f1f1f1;
+}
+
+.producto img {
+
+    transition: transform .3s ease-out;
+}
+
+.producto img:hover{
+
+    transform: scale(.8);
+}
+
+.hero{
+
+    height: auto;
+    width: 100%;
+
+}
+
+.hero img{
+   opacity: 0.760;
+   transition: opacity .3s;
+}
+
+.hero img:hover{
+   opacity: 1;
+   transition: opacity .3s;
+}
+
+
+.contenedor-navegacion{
+
+border-top: 1px solid #e1e1e1;
+
+}
+
+
+
+
+.navegacion-principal{
+    padding: 20px 0 ;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.Enbacezado-lista{
+
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    row-gap: 2rem;
+}
+
+.producto{
+    background-color: #140e0e; 
+}
+
+
+
+.texto-producto{
+    text-align: center;
+    color: #e1e1e1;
+    padding: 2rem;
+}
+
+.texto-producto-principal{
+    text-align: center;
+    margin-right: 50px;
+    color: #e1e1e1;
+    padding: 2rem;
+}
+
+.texto-producto h3{
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio{
+
+    font-size: 2.1rem;
+    font-weight: 900;
+}
+
+.texto-producto-principal .precio{
+
+    font-size: 2.1rem;
+    font-weight: 900;
+}
+
+
+
+
+
+
+.producto img {
+
+    transition: transform .3s ease-out;
+}
+
+.producto img:hover{
+
+    transform: scale(.8);
+}
+
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.producto:nth-child(1) img{
+   height: 43rem;
+   width: 100%;
+   object-fit: scale-down;
+   
+}
+
+.producto:nth-child(2) {
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.producto:nth-child(3){
+
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(3) img{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.producto:nth-child(4){
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6){
+
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+
+
+.contenedor-beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales para la vista desktop */
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.beneficio {
+    background-color: #140e0e; /* Mantiene la paleta oscura fitness */
+    color: #e1e1e1;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid #8cbc00; /* Detalle en verde para mantener la coherencia */
+}
+
+.beneficio img {
+    width: 500px; /* Tamaño controlado para los iconos */
+    margin: 0 auto 1.5rem auto; /* Centra la imagen horizontalmente */
+}
+
+.beneficio h3 {
+    margin-top: 0;
+    color: #8cbc00;
+}
+
+/** =========================================
+    SECCIÓN DE TESTIMONIOS 
+========================================= **/
+.contenedor-testimonios {
+    display: flex; /* Usamos Flexbox aquí para variar y cumplir con los requisitos */
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.testimonio {
+    background-color: #222222; /* Un tono gris muy oscuro para diferenciarlo del fondo */
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1; /* Hace que ambas tarjetas ocupen exactamente el mismo espacio */
+}
+
+.testimonio > p {
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.autor-testimonio {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.autor-testimonio img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Convierte la foto cuadrada en un círculo perfecto */
+    object-fit: cover;
+}
+
+.autor-testimonio h4 {
+    margin: 0 0 0.2rem 0;
+    color: #8cbc00;
+}
+
+.autor-testimonio p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a1a1a1;
+}
+
+
+/** =========================================
+    FOOTER 
+========================================= **/
+.footer-sitio {
+    background-color: #140e0e; /* El mismo fondo oscuro de tus productos */
+    padding: 3rem 2rem; /* Espaciado para que no se vea apretado */
+    text-align: center; /* Centra el texto perfectamente */
+    border-top: 3px solid #8cbc00; /* Una línea verde superior para darle estilo */
+    margin-top: 4rem; /* Lo separa un poco de la sección de testimonios */
+}
+
+.footer-sitio p {
+    color: #a1a1a1; /* Un gris claro para que sea sutil pero legible */
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/** =========================================
+    CASO 4: MEDIA QUERY EXCLUSIVA PARA MOBILE
+========================================= **/
+@media (max-width: 480px) {
+
+
+    .nombre-sitio {
+        flex-direction: column; /* Apila el logo y el texto de arriba hacia abajo */
+        padding-left: 0; /* Quitamos el espacio izquierdo que tenía en escritorio */
+        gap: 15px; /* Crea un espacio seguro entre el logo y el texto */
+    }
+
+    .nombre-sitio h1 {
+        position: static; /* ¡ESTA ES LA CLAVE! Quita el modo absoluto para que el texto ya no flote */
+        transform: none; /* Apaga el centrado forzado del escritorio */
+        font-size: 2rem; /* Letra un poco más pequeña para el móvil */
+        text-align: center;
+    }
+
+    .logo-header {
+        width: 150px; /* Asegura un buen tamaño para el logo en la pantalla pequeña */
+    }
+
+    /* 5. Ajustar márgenes y padding para evitar desbordamientos laterales en pantallas pequeñas */
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    /* Ajuste extra para el header en mobile: apila el logo y el texto para que no se desborden */
+    .nombre-sitio {
+        flex-direction: column;
+        padding-left: 0;
+        gap: 10px;
+    }
+    .titulo-header {
+        font-size: 2rem; /* Reduce un poco el tamaño del título principal */
+    }
+
+    /* 4. Transformar el menú horizontal en menú vertical para facilitar el toque con los dedos */
+    .navegacion-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* 1. Convertir el layout de productos (Grid) y beneficios a 1 sola columna */
+    .listado-productos,
+    .contenedor-beneficios {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Convertir también los testimonios (Flexbox) a formato vertical */
+    .contenedor-testimonios {
+        flex-direction: column;
+    }
+
+    /* Resetear las posiciones de las columnas de todos los productos para que no fuercen el ancho */
+    .producto:nth-child(1),
+    .producto:nth-child(2),
+    .producto:nth-child(3),
+    .producto:nth-child(4),
+    .producto:nth-child(5),
+    .producto:nth-child(6) {
+        grid-column: 1 / -1; 
+        grid-template-columns: 1fr; /* Le quita la doble columna al producto 1 */
+    }
+
+    /* 3. Redimensionar imágenes al 100% del contenedor para que encajen perfectas en el móvil */
+    .producto:nth-child(1) img,
+    .producto:nth-child(2) img,
+    .producto:nth-child(3) img {
+        height: auto; 
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /* 2. Ajustar tamaños de fuente para mejor lectura en pantallas pequeñas */
+    .Enbacezado-lista {
+        font-size: 2rem;
+    }
+
+    .texto-producto h3, 
+    .texto-producto-principal h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Quitamos el margen derecho excesivo que tenía el primer producto en desktop */
+    .texto-producto-principal {
+        margin-right: 0; 
+    }
+
+    /* 6. Asegurar que los botones ocupen ancho completo para ser táctiles más fácilmente */
+    .btn {
+        width: 100%;
+        text-align: center; /* Centramos el texto dentro del botón ancho */
+    }
+}
+
+
